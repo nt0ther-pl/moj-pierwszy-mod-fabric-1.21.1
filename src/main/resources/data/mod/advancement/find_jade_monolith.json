@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:apple"
+    },
+    "title": {
+      "translate": "advancement.mod.find_jade_monolith.title"
+    },
+    "description": {
+      "translate": "advancement.mod.find_jade_monolith.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "entered_structure": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "structure": "mod:jade_monolith"
+        }
+      }
+    }
+  }
+}

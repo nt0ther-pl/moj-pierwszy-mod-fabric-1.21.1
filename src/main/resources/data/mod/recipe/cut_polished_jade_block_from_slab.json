@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "mod:cut_polished_jade_slab"
+    }
+  },
+  "result": {
+    "id": "mod:cut_polished_jade_block",
+    "count": 1
+  }
+}

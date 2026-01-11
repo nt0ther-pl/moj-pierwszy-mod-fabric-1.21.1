@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mod:item/jade_sword_netherite_upgrade"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "id": "mod:string_net",
+    "count": 1
+  }
+}

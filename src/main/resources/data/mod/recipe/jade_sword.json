@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mod:jade_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "addition": {
+    "item": "mod:polished_jade"
+  },
+  "result": {
+    "id": "mod:jade_sword"
+  }
+}

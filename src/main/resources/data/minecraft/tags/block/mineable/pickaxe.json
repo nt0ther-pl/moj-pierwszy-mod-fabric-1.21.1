@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mod:jade_ore",
+    "mod:jade_block",
+    "mod:polished_jade_block",
+    "mod:cut_polished_jade_block",
+    "mod:cut_polished_jade_slab",
+    "mod:cut_polished_jade_stairs"
+  ]
+}

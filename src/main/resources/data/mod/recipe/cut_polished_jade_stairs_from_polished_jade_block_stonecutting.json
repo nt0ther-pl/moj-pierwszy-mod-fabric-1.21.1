@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "mod:polished_jade_block"
+  },
+  "result": {
+    "id": "mod:cut_polished_jade_stairs",
+    "count": 1
+  }
+}

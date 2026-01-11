@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "mod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+  ],
+  "client": [
+    "FireworkRocketEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

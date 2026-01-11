@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mod:polished_jade_block"
+    }
+  ],
+  "result": {
+    "id": "mod:polished_jade",
+    "count": 4
+  }
+}

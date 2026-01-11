@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PJP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "mod:jade"
+    },
+    "J": {
+      "item": "mod:polishing_paper"
+    }
+  },
+  "result": {
+    "id": "mod:polished_jade",
+    "count": 8
+  }
+}

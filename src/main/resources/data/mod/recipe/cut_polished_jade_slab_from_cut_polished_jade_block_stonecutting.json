@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "mod:cut_polished_jade_block"
+  },
+  "result": {
+    "id": "mod:cut_polished_jade_slab",
+    "count": 2
+  }
+}

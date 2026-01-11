@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " PJ",
+    " KP",
+    "I  "
+  ],
+  "key": {
+    "P": {
+      "item": "mod:polished_jade"
+    },
+    "J": {
+      "item": "mod:jade"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "K": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "id": "mod:jade_iron_hammer",
+    "count": 1
+  }
+}

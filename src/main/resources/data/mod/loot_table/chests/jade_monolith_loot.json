@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 20,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mod:polished_jade",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mod:jade_upgrade_smithing_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cherry_sapling",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mod:jade",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:echo_shard",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

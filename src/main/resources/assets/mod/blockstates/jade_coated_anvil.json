@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mod:block/jade_coated_anvil"
+    },
+    "facing=south": {
+      "model": "mod:block/jade_coated_anvil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mod:block/jade_coated_anvil",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "mod:block/jade_coated_anvil",
+      "y": 90
+    }
+  }
+}

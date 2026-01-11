@@ -1,0 +1,71 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "mod:block/jade_coated_anvil",
+		"2": "mod:block/jade_coated_anvil_damaged",
+		"3": "mod:block/jade_coated_anvil_side",
+		"particle": "mod:block/jade_coated_anvil"
+	},
+	"elements": [
+		{
+			"name": "Anvil base",
+			"from": [2, 0, 2],
+			"to": [14, 4, 14],
+			"faces": {
+				"north": {"uv": [4, 4, 0, 16], "rotation": 270, "texture": "#3"},
+				"east": {"uv": [4, 2, 0, 14], "rotation": 270, "texture": "#3"},
+				"south": {"uv": [12, 4, 16, 16], "rotation": 270, "texture": "#3"},
+				"west": {"uv": [0, 2, 4, 14], "rotation": 90, "texture": "#3"},
+				"up": {"uv": [2, 2, 14, 14], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [4, 2, 12, 14], "rotation": 180, "texture": "#3", "cullface": "down"}
+			}
+		},
+		{
+			"name": "Lower narrow portion",
+			"from": [4, 4, 3],
+			"to": [12, 5, 13],
+			"faces": {
+				"north": {"uv": [4, 11, 12, 12], "texture": "#3"},
+				"east": {"uv": [5, 3, 4, 13], "rotation": 270, "texture": "#3"},
+				"south": {"uv": [4, 11, 12, 12], "texture": "#3"},
+				"west": {"uv": [4, 3, 5, 13], "rotation": 90, "texture": "#3"},
+				"up": {"uv": [4, 3, 12, 13], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"name": "Wider section beneath top portion",
+			"from": [6, 5, 4],
+			"to": [10, 10, 12],
+			"faces": {
+				"north": {"uv": [6, 6, 10, 11], "texture": "#3"},
+				"east": {"uv": [10, 4, 5, 12], "rotation": 270, "texture": "#3"},
+				"south": {"uv": [6, 6, 10, 11], "texture": "#3"},
+				"west": {"uv": [5, 4, 10, 12], "rotation": 90, "texture": "#3"}
+			}
+		},
+		{
+			"name": "Anvil top",
+			"from": [3, 10, 0],
+			"to": [13, 16, 16],
+			"faces": {
+				"north": {"uv": [10, 4, 16, 16], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [16, 0, 10, 16], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [0, 1, 6, 15], "rotation": 270, "texture": "#0"},
+				"west": {"uv": [10, 0, 16, 16], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [3, 0, 13, 16], "rotation": 180, "texture": "#2"},
+				"down": {"uv": [3, 0, 13, 16], "rotation": 180, "texture": "#3"}
+			}
+		}
+	],
+	"display": {
+		"fixed": {
+			"rotation": [0, 90, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"on_shelf": {
+			"rotation": [0, 90, 0]
+		}
+	}
+}

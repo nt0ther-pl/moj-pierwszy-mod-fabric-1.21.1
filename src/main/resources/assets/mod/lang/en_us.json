@@ -1,0 +1,31 @@
+{
+  "item.mod.jade": "Jade",
+  "item.mod.polished_jade": "Polished Jade",
+  "item.mod.polishing_paper": "Polishing Paper",
+  "block.mod.jade_ore": "Jade Ore",
+  "block.mod.jade_block": "Block of Jade",
+  "block.mod.polished_jade_block": "Polished Jade Block",
+  "block.mod.cut_polished_jade_block": "Cut-Polished Jade Block",
+  "block.mod.cut_polished_jade_slab": "Cut-Polished Jade Slab",
+  "block.mod.cut_polished_jade_stairs": "Cut-Polished Jade Stairs",
+  "item.mod.jade_sword": "Jade Sword",
+  "item.mod.jade_iron_hammer": "Jade Hammer",
+  "item.mod.echo_powder": "Echo Powder",
+  "item.mod.echo_gunpowder": "Echo Gunpowder",
+  "item.mod.string_net": "String Net",
+  "item.mod.upgraded_fireworks": "Echo Fireworks",
+  "item.mod.jade_upgrade_smithing_template": "Jade Upgrade Smithing Template",
+  "item.mod.jade_netherite_upgrade_smithing_template_fragment": "Jade-Netherite Template Fragment",
+  "item.mod.jade_netherite_upgrade_smithing_template": "Jade-Netherite Template",
+  "item.mod.jade_sword_netherite_upgrade": "Jade-Netherite Sword",
+  "block.mod.jade_coated_anvil": "Jade Anvil",
+  "container.mod.jade_coated_anvil": "Jade Coated Anvil",
+
+  "upgrade.mod.jade_upgrade.applies_to": "Diamond Equipment",
+  "upgrade.mod.jade_upgrade.ingredients": "Polished Jade",
+  "upgrade.mod.jade_upgrade.base_slot_description": "Add diamond weapon",
+  "upgrade.mod.jade_upgrade.additions_slot_description": "Add polished jade",
+
+  "advancement.mod.find_jade_monolith.title": "Jade Monolith",
+  "advancement.mod.find_jade_monolith.description": "Find the hidden structure in the Cherry Grove"
+}
