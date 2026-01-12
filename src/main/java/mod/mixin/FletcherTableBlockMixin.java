@@ -1,6 +1,6 @@
 package mod.mixin;
 
-import mod.blocks.entity.FletcherTableBlockEntity; // Upewnij się, że to pasuje do Twojego pliku!
+import mod.blocks.entity.FletcherTableBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
@@ -16,7 +16,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 
-// Mixujemy oryginalny blok Minecrafta (FletchingTableBlock), ale dodajemy mu duszę (Provider)
 @Mixin(FletchingTableBlock.class)
 public abstract class FletcherTableBlockMixin extends Block implements BlockEntityProvider {
 
@@ -24,28 +23,33 @@ public abstract class FletcherTableBlockMixin extends Block implements BlockEnti
         super(settings);
     }
 
-    // 1. Renderowanie (Bez tego blok będzie niewidzialny!)
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
 
-    // 2. Tworzenie BlockEntity (Twojego 'Mózgu' stołu)
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        // Tu używamy Twojej nazwy: Fletcher
         return new FletcherTableBlockEntity(pos, state);
     }
 
-    // 3. Otwieranie GUI Prawym Przyciskiem
+    // Nadpisujemy onUse, aby ręcznie otworzyć GUI
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+            // DEBUG: Sprawdzamy, czy w ogóle wchodzimy w interakcję
+            System.out.println("DEBUG MIXIN: Kliknięto Fletching Table na serwerze!");
 
-            if (screenHandlerFactory != null) {
-                player.openHandledScreen(screenHandlerFactory);
+            // ZAMIAST: state.createScreenHandlerFactory(...)
+            // ROBIMY: Pobieramy BlockEntity bezpośrednio z mapy
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+
+            if (blockEntity instanceof FletcherTableBlockEntity) {
+                System.out.println("DEBUG MIXIN: Znaleziono FletcherTableBlockEntity! Otwieram GUI...");
+                player.openHandledScreen((NamedScreenHandlerFactory) blockEntity);
+            } else {
+                System.out.println("DEBUG MIXIN: BlockEntity to NULL lub zły typ!");
             }
         }
         return ActionResult.SUCCESS;

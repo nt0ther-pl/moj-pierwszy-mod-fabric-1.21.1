@@ -55,7 +55,8 @@ public class FletcherTableBlockEntity extends BlockEntity implements Implemented
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        // return new FletchingScreenHandler(syncId, playerInventory, this);
-        return null; // Na razie null, żeby nie było błędów kompilacji
+        // Zwracamy instancję naszego Handlera (logiki menu)
+        // Upewnij się, że nazwa klasy to FletcherScreenHandler (lub FletchingScreenHandler - zależy jak nazwałeś plik)
+        return new mod.screen.FletcherScreenHandler(syncId, playerInventory, this);
     }
 }

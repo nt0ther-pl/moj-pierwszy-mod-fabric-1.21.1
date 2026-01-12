@@ -10,14 +10,15 @@ import net.minecraft.util.Identifier;
 
 public class FletcherScreen extends HandledScreen<FletcherScreenHandler> {
     // Ścieżka do Twojej tekstury (którą zaraz stworzysz)
-    private static final Identifier TEXTURE = Identifier.of("mod", "textures/gui/fletcher_table.png");
+    private static final Identifier TEXTURE = Identifier.of("mod", "textures/gui/container/fletcher_table_gui.png");
 
     public FletcherScreen(FletcherScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
-        // Dostosowujemy wymiary GUI
-        // Standard to 176x166. My mamy wyższe GUI przez magazyn, więc zwiększamy wysokość.
-        this.backgroundHeight = 225;
-        this.playerInventoryTitleY = this.backgroundHeight - 166; // Przesunięcie napisu "Inventory"
+        // Tu wpisujemy faktyczny rozmiar Twojego rysunku (nie całego pliku 256x256)
+        this.backgroundWidth = 225;
+        this.backgroundHeight = 166;
+        this.playerInventoryTitleY = this.backgroundHeight - 94; // Przesunięcie napisu "Inventory"
+        this.titleX = 8;
     }
 
     @Override
