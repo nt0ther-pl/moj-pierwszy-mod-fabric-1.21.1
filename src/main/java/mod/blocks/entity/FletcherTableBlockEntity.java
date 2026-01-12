@@ -17,12 +17,12 @@ import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
 // Rozszerzamy BlockEntity i implementujemy nasz Inventory oraz obsługę Menu
-public class FletchingTableBlockEntity extends BlockEntity implements ImplementedInventory, NamedScreenHandlerFactory {
+public class FletcherTableBlockEntity extends BlockEntity implements ImplementedInventory, NamedScreenHandlerFactory {
 
     // Lista przechowująca itemy. 19 slotów to suma twoich wymagań.
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(19, ItemStack.EMPTY);
 
-    public FletchingTableBlockEntity(BlockPos pos, BlockState state) {
+    public FletcherTableBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.FLETCHING_TABLE_BE, pos, state);
     }
 

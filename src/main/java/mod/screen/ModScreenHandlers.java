@@ -14,9 +14,9 @@ public class ModScreenHandlers {
                     new ScreenHandlerType<>(JadeCoatedAnvilScreenHandler::new, FeatureSet.empty()));
 
     // --- DODAJ TO: Rejestracja Fletching Table ---
-    public static final ScreenHandlerType<FletchingScreenHandler> FLETCHING_SCREEN_HANDLER =
+    public static final ScreenHandlerType<FletcherScreenHandler> FLETCHING_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(Mod.MOD_ID, "fletching_table"),
-                    new ScreenHandlerType<>(FletchingScreenHandler::new, FeatureSet.empty()));
+                    new ScreenHandlerType<>(FletcherScreenHandler::new, FeatureSet.empty()));
 
     public static void registerScreenHandlers() {
         Mod.LOGGER.info("Registering Screen Handlers for " + Mod.MOD_ID);

@@ -5,7 +5,8 @@
   "mixins": [
   ],
   "client": [
-    "FireworkRocketEntityMixin"
+    "FireworkRocketEntityMixin",
+    "FletcherTableBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

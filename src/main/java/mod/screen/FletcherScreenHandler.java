@@ -8,18 +8,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
-public class FletchingScreenHandler extends ScreenHandler {
+public class FletcherScreenHandler extends ScreenHandler {
     private final Inventory inventory;
 
     // Konstruktor dla klienta (pusty, synchronizowany)
-    public FletchingScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(15));
+    public FletcherScreenHandler(int syncId, PlayerInventory playerInventory) {
+        this(syncId, playerInventory, new SimpleInventory(195));
     }
 
     // Konstruktor główny (serwer + logika slotów)
-    public FletchingScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
+    public FletcherScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
         super(ModScreenHandlers.FLETCHING_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 15);
+        checkSize(inventory, 19);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
 
@@ -28,10 +28,14 @@ public class FletchingScreenHandler extends ScreenHandler {
         // 1. INPUT (Surowiec) - Index 0
         this.addSlot(new Slot(inventory, 0, 48, 35));
 
-        // 2. CRAFTING (3 pionowe) - Index 1, 2, 3
-        this.addSlot(new Slot(inventory, 1, 76, 17)); // Góra
-        this.addSlot(new Slot(inventory, 2, 76, 35)); // Środek
-        this.addSlot(new Slot(inventory, 3, 76, 53)); // Dół
+        // 2. CRAFTING (7 pionowe) - Index 1, 2, 3
+        this.addSlot(new Slot(inventory, 1, 76, 17)); // Grot
+        this.addSlot(new Slot(inventory, 2, 76, 35)); // Trzon
+        this.addSlot(new Slot(inventory, 3, 76, 53)); // Lotka
+        this.addSlot(new Slot(inventory, 3, 76, 53)); // Dół łuku
+        this.addSlot(new Slot(inventory, 3, 76, 53)); // Środek łuku
+        this.addSlot(new Slot(inventory, 3, 76, 53)); // Góra łuku
+        this.addSlot(new Slot(inventory, 3, 76, 53)); // Struna
 
         // 3. OUTPUT (Wynik) - Index 4
         this.addSlot(new Slot(inventory, 4, 116, 35) {
