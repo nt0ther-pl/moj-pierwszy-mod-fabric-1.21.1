@@ -13,7 +13,7 @@ public class FletcherScreenHandler extends ScreenHandler {
 
     // Konstruktor dla klienta (pusty, synchronizowany)
     public FletcherScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(195));
+        this(syncId, playerInventory, new SimpleInventory(19));
     }
 
     // Konstruktor główny (serwer + logika slotów)

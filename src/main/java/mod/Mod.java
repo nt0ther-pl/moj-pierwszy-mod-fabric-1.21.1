@@ -1,5 +1,6 @@
 package mod;
 
+import mod.blocks.entity.ModBlockEntities;
 import mod.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;
 import mod.blocks.ModBlocks;
@@ -18,5 +19,6 @@ public class Mod implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModScreenHandlers.registerScreenHandlers();
         ModParticles.registerParticles();
+        ModBlockEntities.registerBlockEntities();
 	}
 }

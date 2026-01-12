@@ -1,9 +1,10 @@
 package mod.mixin;
 
-import mod.blocks.entity.FletcherTableBlockEntity; // Upewnij się, że pakiet jest dobry (blocks vs block)
+import mod.blocks.entity.FletcherTableBlockEntity; // Upewnij się, że to pasuje do Twojego pliku!
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.FletchingTableBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,36 +16,35 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 
-// Podmieniamy FletchingTableBlock, żeby dziedziczył po BlockWithEntity (dzięki temu ma BlockEntity)
+// Mixujemy oryginalny blok Minecrafta (FletchingTableBlock), ale dodajemy mu duszę (Provider)
 @Mixin(FletchingTableBlock.class)
-public abstract class FletcherTableBlockMixin extends BlockWithEntity {
+public abstract class FletcherTableBlockMixin extends Block implements BlockEntityProvider {
 
-    protected FletcherTableBlockMixin(Settings settings) {
+    public FletcherTableBlockMixin(Settings settings) {
         super(settings);
     }
 
-    // 1. Metoda tworząca BlockEntity w świecie
-    @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new FletcherTableBlockEntity(pos, state);
-    }
-
-    // 2. Metoda Renderowania (WAŻNE: bez tego blok będzie niewidzialny lub zbugowany przy BlockWithEntity)
+    // 1. Renderowanie (Bez tego blok będzie niewidzialny!)
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
 
-    // 3. Obsługa Prawego Przycisku Myszy (Otwieranie GUI)
+    // 2. Tworzenie BlockEntity (Twojego 'Mózgu' stołu)
+    @Nullable
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        // Tu używamy Twojej nazwy: Fletcher
+        return new FletcherTableBlockEntity(pos, state);
+    }
+
+    // 3. Otwieranie GUI Prawym Przyciskiem
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
-            // Pobieramy BlockEntity z pozycji
             NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
 
             if (screenHandlerFactory != null) {
-                // Otwieramy GUI
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
